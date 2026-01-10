@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './assets/M dev.png';
+import Drone from './assets/drone.png';
 import { 
   FiGithub, 
   FiLinkedin, 
@@ -83,7 +84,7 @@ const projects = [
     title: "Drone Brouchere Website",
     description: "Modern UI drone photography website",
     tags: ["Laravel", "PHP", "MySQL", "JavaScript", "blade"],
-    image: "https://images.unsplash.com/photo-1623282033815-40b05d96c903?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: Drone,
     github: "#https://github.com/mohimanul15/laravel-drone-project",
     live: "https://drone.free.nf"
   }
@@ -505,7 +506,7 @@ const App = () => {
 
             <div className="flex justify-center mb-8">
               <div className="inline-flex rounded-full p-1 bg-gray-800">
-                {['all', 'React', 'WordPress', 'Next.js'].map((tab) => (
+                {['all', 'React', 'WordPress', 'Next.js', 'Laravel'].map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab.toLowerCase())}
