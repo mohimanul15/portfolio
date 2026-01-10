@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Logo from './assets/M dev.png';
 import { 
   FiGithub, 
   FiLinkedin, 
@@ -29,6 +30,7 @@ import {
   SiPhp,
   SiMysql
 } from "react-icons/si";
+import { DiLaravel } from 'react-icons/di';
 
 const projects = [
   {
@@ -76,6 +78,15 @@ const projects = [
     github: "#",
     live: "https://parkcitybjj.com/"
   },
+  {
+    id: 6,
+    title: "Drone Brouchere Website",
+    description: "Modern UI drone photography website",
+    tags: ["Laravel", "PHP", "MySQL", "JavaScript", "blade"],
+    image: "https://images.unsplash.com/photo-1623282033815-40b05d96c903?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    github: "#https://github.com/mohimanul15/laravel-drone-project",
+    live: "https://drone.free.nf"
+  }
 ];
 
 const experience = [
@@ -126,7 +137,8 @@ const skills = [
   { icon: <SiMysql size={24} />, name: "MySQL", level: 75 },
   { icon: <FaHtml5 size={24} />, name: "HTML5", level: 95 },
   { icon: <FaCss3Alt size={24} />, name: "CSS3", level: 90 },
-  { icon: <FaJs size={24} />, name: "JavaScript", level: 85 }
+  { icon: <FaJs size={24} />, name: "JavaScript", level: 85 },
+  { icon: <DiLaravel size={24} />, name: "Laravel", level: 70 }
 ];
 
 const fadeIn = {
@@ -166,7 +178,7 @@ const App = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            Moha. Portfolio
+            <img src={Logo} alt="Site Logo" srcset="" width="120" height="auto"/>
           </motion.a>
           
           <motion.div 
