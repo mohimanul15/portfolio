@@ -1,7 +1,9 @@
 import { useState} from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './assets/M dev.png';
-import Drone from './assets/drone.png';
+import Drone from '/drone.png';
+import Fiqfy from '/fiqfy.png';
+import Mealmet from '/mealmet.png';
 import { 
   FiGithub, 
   FiLinkedin, 
@@ -85,8 +87,26 @@ const projects = [
     description: "Modern UI drone photography website",
     tags: ["Laravel", "PHP", "MySQL", "JavaScript", "blade"],
     image: Drone,
-    github: "#https://github.com/mohimanul15/laravel-drone-project",
+    github: "https://github.com/mohimanul15/laravel-drone-project",
     live: "https://drone.free.nf"
+  },
+  {
+    id: 7,
+    title: "Company Portfolio Website",
+    description: "Portfolio website for a Business Company",
+    tags: ["React", "Node.js", "MongoDB"],
+    image: Fiqfy,
+    github: "https://github.com/mohimanul15/fiqfy-v1",
+    live: "fiqfy.com"
+  },
+  {
+    id: 8,
+    title: "AI Meal Planner",
+    description: "AI-powered meal planning app with personalized recipes",
+    tags: ["Laravel", "PHP", "Mysql", "JavaScript", "AI", "Blade","tailwind CSS"],
+    image: Mealmet,
+    github: "https://github.com/mohimanul15/laravel-mealmet",
+    live: "https://mealmet.free.nf/"
   }
 ];
 
