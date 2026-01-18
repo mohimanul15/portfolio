@@ -4,6 +4,7 @@ import Logo from './assets/M dev.png';
 import Drone from '/drone.png';
 import Fiqfy from '/fiqfy.png';
 import Mealmet from '/mealmet.png';
+import HairBySadia from '/hair-by-sadia.png';
 import { 
   FiGithub, 
   FiLinkedin, 
@@ -107,6 +108,15 @@ const projects = [
     image: Mealmet,
     github: "https://github.com/mohimanul15/laravel-mealmet",
     live: "https://mealmet.free.nf/"
+  },
+  {
+    id: 9,
+    title: "Hair Salon Website",
+    description: "Responsive website for a local hair salon",
+    tags: ["React", "Node.Js", "MongoDB", "JavaScript", "Tailwind CSS","Framer Motion"],
+    image: HairBySadia,
+    github: "https://github.com/mohimanul15/hair-by-sadia",
+    live: "https://hair-by-sadia.vercel.app/"
   }
 ];
 
