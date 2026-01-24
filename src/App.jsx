@@ -1,14 +1,16 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './assets/M dev.png';
 import Drone from '/drone.png';
 import Fiqfy from '/fiqfy.png';
 import Mealmet from '/mealmet.png';
 import HairBySadia from '/hair-by-sadia.png';
-import { 
-  FiGithub, 
-  FiLinkedin, 
-  FiMail, 
+import AiTools from '/ai-tools.png';
+import Encanto from '/encanto.png';
+import {
+  FiGithub,
+  FiLinkedin,
+  FiMail,
   FiGlobe,
   FiExternalLink,
   FiChevronDown,
@@ -17,17 +19,17 @@ import {
   FiMonitor,
   FiSmartphone
 } from "react-icons/fi";
-import { 
-  FaReact, 
-  FaWordpress, 
+import {
+  FaReact,
+  FaWordpress,
   FaNodeJs,
   FaHtml5,
   FaCss3Alt,
   FaJs
 } from "react-icons/fa";
-import { 
-  SiMongodb, 
-  SiTailwindcss, 
+import {
+  SiMongodb,
+  SiTailwindcss,
   SiFramer,
   SiNextdotjs,
   SiExpress,
@@ -104,7 +106,7 @@ const projects = [
     id: 8,
     title: "AI Meal Planner",
     description: "AI-powered meal planning app with personalized recipes",
-    tags: ["Laravel", "PHP", "Mysql", "JavaScript", "AI", "Blade","tailwind CSS"],
+    tags: ["Laravel", "PHP", "Mysql", "JavaScript", "AI", "Blade", "tailwind CSS"],
     image: Mealmet,
     github: "https://github.com/mohimanul15/laravel-mealmet",
     live: "https://mealmet.free.nf/"
@@ -113,10 +115,28 @@ const projects = [
     id: 9,
     title: "Hair Salon Website",
     description: "Responsive website for a local hair salon",
-    tags: ["React", "Node.Js", "MongoDB", "JavaScript", "Tailwind CSS","Framer Motion"],
+    tags: ["React", "Node.Js", "MongoDB", "JavaScript", "Tailwind CSS", "Framer Motion"],
     image: HairBySadia,
     github: "https://github.com/mohimanul15/hair-by-sadia",
     live: "https://hair-by-sadia.vercel.app/"
+  },
+  {
+    id: 10,
+    title: "Ai tools finder",
+    description: "AI Lookout is a high-performance, aesthetically pleasing directory for discovering the world's best AI tools.",
+    tags: ["Laravel", "PHP", "Mysql", "JavaScript", "AI", "Blade", "tailwind CSS"],
+    image: AiTools,
+    github: "https://github.com/mohimanul15/hair-by-sadia",
+    live: "https://ai-lookout.free.nf/"
+  },
+  {
+    id: 11,
+    title: "Encanto Shop Website",
+    description: "Natural care product website for product showcasing",
+    tags: ["React", "Node.Js", "MongoDB", "JavaScript", "Tailwind CSS", "Framer Motion"],
+    image: Encanto,
+    github: "https://github.com/mohimanul15/encanto-shop",
+    live: "https://encanto-shop.vercel.app/"
   }
 ];
 
@@ -191,28 +211,28 @@ const App = () => {
   const [activeTab, setActiveTab] = useState('all');
   const [expandedExperience, setExpandedExperience] = useState(null);
 
-  const filteredProjects = activeTab === 'all' 
-    ? projects 
-    : projects.filter(project => 
-        project.tags.some(tag => tag.toLowerCase() === activeTab.toLowerCase())
-      );
+  const filteredProjects = activeTab === 'all'
+    ? projects
+    : projects.filter(project =>
+      project.tags.some(tag => tag.toLowerCase() === activeTab.toLowerCase())
+    );
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       {/* Navigation */}
       <nav className="fixed w-full bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <motion.a 
-            href="#" 
+          <motion.a
+            href="#"
             className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <img src={Logo} alt="Site Logo" srcset="" width="120" height="auto"/>
+            <img src={Logo} alt="Site Logo" srcset="" width="120" height="auto" />
           </motion.a>
-          
-          <motion.div 
+
+          <motion.div
             className="hidden md:flex space-x-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -225,8 +245,8 @@ const App = () => {
             <a href="#projects" className="hover:text-cyan-400 transition">Projects</a>
             <a href="#contact" className="hover:text-cyan-400 transition">Contact</a>
           </motion.div>
-          
-          <motion.button 
+
+          <motion.button
             className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -240,14 +260,14 @@ const App = () => {
       {/* Hero Section */}
       <section id="home" className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
             className="flex flex-col md:flex-row items-center"
           >
             <motion.div variants={fadeIn} className="md:w-1/2 mb-12 md:mb-0">
-              <motion.p 
+              <motion.p
                 className="text-cyan-400 mb-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -255,7 +275,7 @@ const App = () => {
               >
                 Hi, I'm
               </motion.p>
-              <motion.h1 
+              <motion.h1
                 className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -267,7 +287,7 @@ const App = () => {
                 <br />
                 Web Developer
               </motion.h1>
-              <motion.p 
+              <motion.p
                 className="text-xl text-gray-400 mb-8 max-w-lg"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -289,8 +309,8 @@ const App = () => {
                 </button>
               </motion.div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               variants={fadeIn}
               className="md:w-1/2 flex justify-center"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -300,9 +320,9 @@ const App = () => {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-75"></div>
                 <div className="relative bg-gray-800 rounded-2xl p-2">
-                  <img 
-                    src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                    alt="Developer working" 
+                  <img
+                    src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Developer working"
                     className="rounded-xl w-full max-w-md"
                   />
                 </div>
@@ -315,12 +335,12 @@ const App = () => {
       {/* About Section */}
       <section id="about" className="py-20 px-6 bg-gray-800/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
           >
-            <motion.div 
+            <motion.div
               variants={fadeIn}
               className="text-center mb-16"
             >
@@ -334,7 +354,7 @@ const App = () => {
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <motion.div 
+              <motion.div
                 variants={fadeIn}
                 className="bg-gray-800 p-8 rounded-xl text-center"
                 whileHover={{ y: -10 }}
@@ -348,7 +368,7 @@ const App = () => {
                 </p>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 variants={fadeIn}
                 className="bg-gray-800 p-8 rounded-xl text-center"
                 whileHover={{ y: -10 }}
@@ -362,7 +382,7 @@ const App = () => {
                 </p>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 variants={fadeIn}
                 className="bg-gray-800 p-8 rounded-xl text-center"
                 whileHover={{ y: -10 }}
@@ -383,12 +403,12 @@ const App = () => {
       {/* Skills Section */}
       <section id="skills" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
           >
-            <motion.div 
+            <motion.div
               variants={fadeIn}
               className="text-center mb-16"
             >
@@ -401,12 +421,12 @@ const App = () => {
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={fadeIn}
               className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
             >
               {skills.map((skill, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="bg-gray-800 p-6 rounded-xl"
                   whileHover={{ scale: 1.05 }}
@@ -418,8 +438,8 @@ const App = () => {
                     <h3 className="font-medium">{skill.name}</h3>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2.5">
-                    <div 
-                      className="bg-cyan-500 h-2.5 rounded-full" 
+                    <div
+                      className="bg-cyan-500 h-2.5 rounded-full"
                       style={{ width: `${skill.level}%` }}
                     ></div>
                   </div>
@@ -433,12 +453,12 @@ const App = () => {
       {/* Experience Section */}
       <section id="experience" className="py-20 px-6 bg-gray-800/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
           >
-            <motion.div 
+            <motion.div
               variants={fadeIn}
               className="text-center mb-16"
             >
@@ -451,19 +471,19 @@ const App = () => {
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={fadeIn}
               className="space-y-6"
             >
               {experience.map((exp, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <button 
+                  <button
                     className="w-full p-6 text-left flex justify-between items-center"
                     onClick={() => setExpandedExperience(expandedExperience === index ? null : index)}
                   >
@@ -477,15 +497,15 @@ const App = () => {
                         <span className="text-gray-400 text-sm">{exp.period}</span>
                       </div>
                     </div>
-                    <FiChevronDown 
-                      className={`text-gray-400 transition-transform ${expandedExperience === index ? 'rotate-180' : ''}`} 
+                    <FiChevronDown
+                      className={`text-gray-400 transition-transform ${expandedExperience === index ? 'rotate-180' : ''}`}
                       size={20}
                     />
                   </button>
-                  
+
                   <AnimatePresence>
                     {expandedExperience === index && (
-                      <motion.div 
+                      <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -516,12 +536,12 @@ const App = () => {
       {/* Projects Section */}
       <section id="projects" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
           >
-            <motion.div 
+            <motion.div
               variants={fadeIn}
               className="text-center mb-16"
             >
@@ -548,12 +568,12 @@ const App = () => {
               </div>
             </div>
 
-            <motion.div 
+            <motion.div
               variants={fadeIn}
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {filteredProjects.map((project) => (
-                <motion.div 
+                <motion.div
                   key={project.id}
                   className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700"
                   whileHover={{ y: -10 }}
@@ -561,9 +581,9 @@ const App = () => {
                   animate={{ opacity: 1 }}
                 >
                   <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
+                    <img
+                      src={project.image}
+                      alt={project.title}
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent"></div>
@@ -571,10 +591,10 @@ const App = () => {
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                     <p className="text-gray-400 mb-4">{project.description}</p>
-                    
+
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.tags.map((tag, index) => (
-                        <span 
+                        <span
                           key={index}
                           className="bg-gray-700 text-cyan-400 text-xs px-3 py-1 rounded-full"
                         >
@@ -582,16 +602,18 @@ const App = () => {
                         </span>
                       ))}
                     </div>
-                    
+
                     <div className="flex space-x-4">
-                      <a 
-                        href={project.github} 
+                      <a
+                        href={project.github}
+                        target='_blank'
                         className="text-gray-400 hover:text-white transition flex items-center"
                       >
                         <FiGithub className="mr-2" /> Code
                       </a>
-                      <a 
-                        href={project.live} 
+                      <a
+                        href={project.live}
+                        target='_blank'
                         className="text-gray-400 hover:text-white transition flex items-center"
                       >
                         <FiExternalLink className="mr-2" /> Live Demo
@@ -608,12 +630,12 @@ const App = () => {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-gray-800/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
           >
-            <motion.div 
+            <motion.div
               variants={fadeIn}
               className="text-center mb-16"
             >
@@ -626,7 +648,7 @@ const App = () => {
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={fadeIn}
               className="grid md:grid-cols-2 gap-12"
             >
@@ -635,18 +657,18 @@ const App = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
-                      <input 
-                        type="text" 
-                        id="name" 
+                      <input
+                        type="text"
+                        id="name"
                         className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your name"
                       />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
-                      <input 
-                        type="email" 
-                        id="email" 
+                      <input
+                        type="email"
+                        id="email"
                         className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your email"
                       />
@@ -654,23 +676,23 @@ const App = () => {
                   </div>
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject</label>
-                    <input 
-                      type="text" 
-                      id="subject" 
+                    <input
+                      type="text"
+                      id="subject"
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Subject"
                     />
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
-                    <textarea 
-                      id="message" 
-                      rows="5" 
+                    <textarea
+                      id="message"
+                      rows="5"
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Your message"
                     ></textarea>
                   </div>
-                  <button 
+                  <button
                     type="submit"
                     className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105"
                   >
@@ -678,11 +700,11 @@ const App = () => {
                   </button>
                 </form>
               </div>
-              
+
               <div>
                 <div className="bg-gray-800 p-8 rounded-xl h-full">
                   <h3 className="text-xl font-bold mb-6">Contact Information</h3>
-                  
+
                   <div className="space-y-6">
                     <div className="flex items-start">
                       <div className="bg-cyan-900/20 text-cyan-400 w-12 h-12 rounded-full flex items-center justify-center mr-4">
@@ -695,7 +717,7 @@ const App = () => {
                         </a>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start">
                       <div className="bg-cyan-900/20 text-cyan-400 w-12 h-12 rounded-full flex items-center justify-center mr-4">
                         <FiGlobe size={20} />
@@ -705,7 +727,7 @@ const App = () => {
                         <p className="text-gray-400">California, USA</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start">
                       <div className="bg-cyan-900/20 text-cyan-400 w-12 h-12 rounded-full flex items-center justify-center mr-4">
                         <FiSmartphone size={20} />
@@ -718,7 +740,7 @@ const App = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="mt-8 pt-6 border-t border-gray-700">
                     <h4 className="font-medium mb-4">Connect with me</h4>
                     <div className="flex space-x-4">
@@ -749,7 +771,7 @@ const App = () => {
                 Moha. Portfolio
               </a>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
               <a href="#home" className="text-gray-400 hover:text-cyan-400 transition">Home</a>
               <a href="#about" className="text-gray-400 hover:text-cyan-400 transition">About</a>
@@ -758,7 +780,7 @@ const App = () => {
               <a href="#projects" className="text-gray-400 hover:text-cyan-400 transition">Projects</a>
               <a href="#contact" className="text-gray-400 hover:text-cyan-400 transition">Contact</a>
             </div>
-            
+
             <div className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Mohimanul I. All rights reserved.
             </div>
