@@ -7,6 +7,7 @@ import Mealmet from '/mealmet.png';
 import HairBySadia from '/hair-by-sadia.png';
 import AiTools from '/ai-tools.png';
 import Encanto from '/encanto.png';
+import BgRemover from '/bg-remover.png';
 import {
   FiGithub,
   FiLinkedin,
@@ -137,6 +138,15 @@ const projects = [
     image: Encanto,
     github: "https://github.com/mohimanul15/encanto-shop",
     live: "https://encanto-shop.vercel.app/"
+  },
+  {
+    id: 12,
+    title: "Image background remover",
+    description: "Image background remover using browser resourse",
+    tags: ["React", "JavaScript", "Tailwind CSS"],
+    image: BgRemover,
+    github: "https://github.com/mohimanul15/bg-remover",
+    live: "https://bg-remover.surge.sh/"
   }
 ];
 
