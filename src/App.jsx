@@ -8,6 +8,7 @@ import HairBySadia from '/hair-by-sadia.png';
 import AiTools from '/ai-tools.png';
 import Encanto from '/encanto.png';
 import BgRemover from '/bg-remover.png';
+import LiceBanisher from '/lice-banisher.png';
 import {
   FiGithub,
   FiLinkedin,
@@ -147,6 +148,15 @@ const projects = [
     image: BgRemover,
     github: "https://github.com/mohimanul15/bg-remover",
     live: "https://bg-remover.surge.sh/"
+  },
+  {
+    id: 13,
+    title: "Lice Banisher",
+    description: "lice remover clinic website with booking form",
+    tags: ["React", "JavaScript", "Tailwind CSS", "aos", "Framer motion"],
+    image: LiceBanisher,
+    github: "https://github.com/mohimanul15/lice-banisher",
+    live: "https://lice-banisher.surge.sh/"
   }
 ];
 
