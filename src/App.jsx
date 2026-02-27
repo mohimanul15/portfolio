@@ -102,7 +102,7 @@ const projects = [
     tags: ["React", "Node.js", "MongoDB"],
     image: Fiqfy,
     github: "https://github.com/mohimanul15/fiqfy-v1",
-    live: "fiqfy.com"
+    live: "https://fiqfy.com"
   },
   {
     id: 8,
